@@ -7,8 +7,8 @@ set Settings=%lists%Settings.txt
 
 setlocal EnableDelayedExpansion
 
-for /f %%a in (%Settings%) do (
-	set domain=%%a
+for /f %%d in (%Settings%) do (
+	set domain=%%d
 	)
 
 echo[
@@ -20,15 +20,15 @@ echo[
 
 
 set counter=0
-for /f %%a in (%Helpdeskers%) do (
+for /f %%h in (%Helpdeskers%) do (
 	set /a counter+=1
-	echo 	!counter! - %%a
-	set list[!counter!]=%%a
+	echo 	!counter! - %%h
+	set list[!counter!]=%%h
 	)
 	echo 	.  - Exit
 
-rem for /l %%x in (1,1,%counter%) do @(
-rem 	echo !List[%%x]!
+rem for /l %%i in (1,1,%counter%) do @(
+rem 	echo !List[%%i]!
 rem 	)
 
 echo[
@@ -38,6 +38,5 @@ set /p superuser=		Select your Domain-controller user:
 if %superuser%==. exit
 
 runas /user:!List[%superuser%]!@%domain% "%root%02_MAIN.bat" 
-
 
 exit
