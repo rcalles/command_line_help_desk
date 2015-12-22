@@ -1,6 +1,3 @@
-admin-riccal
-rapard
-seamcg
-topadmin
-consma
-itfocus
+whatever
+whoever
+adminit
