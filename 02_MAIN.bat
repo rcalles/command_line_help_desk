@@ -1,0 +1,2 @@
+echo there
+pause
