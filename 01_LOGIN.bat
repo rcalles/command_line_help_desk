@@ -34,7 +34,7 @@ rem 	)
 
 
 REM This batch asks for Domain-controller credentials in order to perform AD operations
-REM then opens the MAIN.bat
+REM then opens the SECONDARY.bat
 
 echo[
 
